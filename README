@@ -1,4 +1,4 @@
-**Description**
+# Description
 
 The dataset describes the amount of various chemicals present in wine and their effect on it's quality. It comes from Kaggle : https://www.kaggle.com/datasets/yasserh/wine-quality-dataset.
 
@@ -26,13 +26,13 @@ Acknowledgements:
 This dataset is also available from Kaggle & UCI machine learning repository, 
 https://archive.ics.uci.edu/ml/datasets/wine+quality.
 
-**Objective:**
+# Objective:
 
 Build classification models to predict the wine quality.
 
 Add all files to put it in production.
 
-**How to use**
+# How to use
 
 First of all, run the preparation_model.py inside the production folder. Then a model is going to be made. Then run the containerize.py file to build the docker image and run it.
 
@@ -43,7 +43,7 @@ You can run the setup_monitoring.py too open Prometheus for the monitoring but t
 
 Run the update_and_maintenance.py script to pull any modification from the git.
 
-**What's next ?**
+# What's next ?
 
 I can add a file to add in the csv file more datas and then train the model again with these new datas. We can also improve the flask API in a true app.
 
