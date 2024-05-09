@@ -1,0 +1,18 @@
+FROM python:3.10-slim
+
+# Copier les fichiers nécessaires
+COPY wine_classifier.pkl .
+COPY deploy_model.py .
+COPY . .
+
+# Installer les dépendances
+RUN pip install -r requirements.txt
+
+# Définir les variables d'environnement
+ENV FLASK_APP=deploy_model.py
+
+# Exposer le port
+EXPOSE 5000
+
+# Commande par défaut pour exécuter l'API
+CMD ["flask", "run", "--host=0.0.0.0"]

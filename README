@@ -1,0 +1,53 @@
+** Description **
+
+The dataset describes the amount of various chemicals present in wine and their effect on it's quality. It comes from Kaggle : https://www.kaggle.com/datasets/yasserh/wine-quality-dataset.
+
+I've choosen this dataset because Spain and France are both wine's countries. 
+Also, there is 10 class of wine here that I find enough to show you how I work.
+
+This data frame contains the following columns:
+
+Input variables (based on physicochemical tests):\
+1 - fixed acidity\
+2 - volatile acidity\
+3 - citric acid\
+4 - residual sugar\
+5 - chlorides\
+6 - free sulfur dioxide\
+7 - total sulfur dioxide\
+8 - density\
+9 - pH\
+10 - sulphates\
+11 - alcohol\
+Output variable (based on sensory data):\
+12 - quality (score between 0 and 10)
+
+Acknowledgements:
+This dataset is also available from Kaggle & UCI machine learning repository, 
+https://archive.ics.uci.edu/ml/datasets/wine+quality.
+
+Objective:
+
+Understand the Dataset & cleanup (if required).
+
+Build classification models to predict the wine quality.
+
+Add all files to put it in production.
+
+** How to use **
+
+First of all, run the preparation_model.py inside the production folder. Then a model is going to be made. Then run the containerize.py file to build the docker image and run it.
+
+Then run the file deploy_model to see if everything's good and then run the test_api.py to see the prediction. For the test I've written, the result is 6.
+
+Then running the containerize.py, you can build the docker image to run the model.
+You can run the setup_monitoring.py too open Prometheus for the monitoring but to be honest I've never used it.
+
+Run the update_and_maintenance.py script to pull any modification from the git.
+
+** What's next ?**
+
+I can add a file to add in the csv file more datas and then train the model again with these new datas. We can also improve the flask API in a true app.
+
+Author : BRENGETTO Antonin
+Contact : antonin.brengetto@gmail.com
